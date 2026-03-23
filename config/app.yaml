@@ -1,0 +1,10 @@
+# src/test/resources/app.yaml
+env: "development"
+
+service:
+  name: "hapifyme"
+  baseUrl: "https://apps.qualiadept.eu/hapifyme"
+
+timeouts:
+  connectMs: 1000
+  readMs: 3000

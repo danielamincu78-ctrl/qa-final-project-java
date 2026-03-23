@@ -1,0 +1,25 @@
+## Verifică că un request GET la https://jsonplaceholder.typicode.com/todos/1 returnează status 200 și conține un title.
+
+START
+
+SETEZ url = "https://jsonplaceholder.typicode.com/todos/1"
+
+TRIMIT GET request către url
+SALVEZ response
+
+// Verifică status code
+DACA status_response = 200 ATUNCI
+    AFISEZ "Status este 200 - OK"
+    
+    // Verifică dacă există câmpul title
+    PARCURGE response
+    
+    DACA "title" există în response ATUNCI
+        AFISEZ "Câmpul 'title' există"
+    ALTFEL
+        AFISEZ "Eroare: câmpul 'title' lipsește"
+    
+ALTFEL
+    AFISEZ "Eroare: status diferit de 200"
+
+END
